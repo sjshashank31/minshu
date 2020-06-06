@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meri practice</title>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	
+</head>
+<body>
+<div class="container mt-5">
+
+
+
+	<div class="card-header">Q4. print table </div>
+	<input type="number" placeholder="Enter number" id="num">
+	<button class="btn btn-outline-info" onclick="printTable()"> Print </button>
+	<div id="table"></div>
+
+	<div class="card-header">Q9. print pattern1 </div>
+	<button class="btn btn-outline-info" onclick="printPattern1()"> Print </button>
+	<div id="pattern1"></div>
+	<div class="card-header">Q9. print pattern2 </div>
+	<button class="btn btn-outline-info" onclick="printPattern2()"> Print </button>
+	<div id="pattern2"></div>
+	
+
+
+</div>
+<script type="text/javascript">
+
+	function printPattern2(){
+	var n=5;
+
+	for(let i=1;i<=n;i++){
+		
+		for(let j=1;j<=i;j++){
+			document.getElementById('pattern2').innerHTML += i;
+		}
+		document.getElementById('pattern2').innerHTML += "<br>";
+
+	}
+	}
+
+	function printPattern1(){
+	var n=5;
+
+	for(let i=1;i<=n;i++){
+		
+		for(let j=1;j<=i;j++){
+			document.getElementById('pattern1').innerHTML += j;
+		}
+		document.getElementById('pattern1').innerHTML += "<br>";
+
+	}
+	}
+
+	function printTable(){
+		n=document.getElementById('num').value
+	
+		i=1
+		var num =1
+		while (i<=10){
+			document.getElementById('table').innerHTML += i*n+"<br>";
+			i++;
+		}
+	}
+
+</script>
+</body>
+</html>
